@@ -25,21 +25,6 @@ public class LoginDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_dashboard);
-
-        email = (EditText) findViewById(R.id.email);
-        password = (EditText) findViewById(R.id.password);
-        login = (Button) findViewById(R.id.login);
-        emailError = (TextInputLayout) findViewById(R.id.emailError);
-        passError = (TextInputLayout) findViewById(R.id.passError);
-
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SetValidation();
-            }
-        });
-
     }
 
     public void SetValidation() {

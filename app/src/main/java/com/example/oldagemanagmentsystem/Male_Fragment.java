@@ -70,25 +70,12 @@ public class Male_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_male_, container, false);
         setHasOptionsMenu(true);
 
-        imageButton=(ImageButton)view.findViewById(R.id.GoBackButton);
-
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(),MainDasboard.class));
-            }
-        });
-
         toolbar=view.findViewById(R.id.toolbar_records);
         toolbar.setTitle("Male Records");
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         recview=(RecyclerView)view.findViewById(R.id.male_recycler);
-        recview.setNestedScrollingEnabled(false);
-        loadingPB = view.findViewById(R.id.idProgressBar);
         db=FirebaseFirestore.getInstance();
         coursesArrayList = new ArrayList<>();
-        recview.setHasFixedSize(true);
-        recview.setLayoutManager(new LinearLayoutManager(getContext()));
 
         courseRVAdapter = new viewPersonAdapter(coursesArrayList, getContext());
 
@@ -100,7 +87,6 @@ public class Male_Fragment extends Fragment {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         if (!queryDocumentSnapshots.isEmpty()) {
-                            loadingPB.setVisibility(View.GONE);
                             List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
                             for (DocumentSnapshot d : list) {
                                 PersonViewItems c = d.toObject(PersonViewItems.class);
@@ -155,7 +141,6 @@ public class Male_Fragment extends Fragment {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         if (!queryDocumentSnapshots.isEmpty()) {
-                            loadingPB.setVisibility(View.GONE);
                             List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
                             for (DocumentSnapshot d : list) {
                                 PersonViewItems c = d.toObject(PersonViewItems.class);

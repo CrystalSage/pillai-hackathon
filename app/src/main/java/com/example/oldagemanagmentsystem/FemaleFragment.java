@@ -10,9 +10,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -74,24 +76,29 @@ public class FemaleFragment extends Fragment {
         toolbar.setTitle("Male Records");
         ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
         recview=(RecyclerView)view.findViewById(R.id.female_recycler);
-        recview.setNestedScrollingEnabled(false);
-        loadingPB = view.findViewById(R.id.idProgressBar_female);
         db=FirebaseFirestore.getInstance();
         coursesArrayList = new ArrayList<>();
-        recview.setHasFixedSize(true);
         recview.setLayoutManager(new LinearLayoutManager(getContext()));
+        recview.setNestedScrollingEnabled(true);
 
         courseRVAdapter = new viewPersonAdapter(coursesArrayList, getContext());
 
         // setting adapter to our recycler view.
         recview.setAdapter(courseRVAdapter);
 
+
+        recview.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                Log.i("TAG", "onScrollStateChanged: SCROLLED NOW");
+            }
+        });
+
         db.collection("Male Users").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                         if (!queryDocumentSnapshots.isEmpty()) {
-                            loadingPB.setVisibility(View.GONE);
                             List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
                             for (DocumentSnapshot d : list) {
                                 PersonViewItems c = d.toObject(PersonViewItems.class);

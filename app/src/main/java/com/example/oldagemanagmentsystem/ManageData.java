@@ -2,14 +2,20 @@ package com.example.oldagemanagmentsystem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,9 +34,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ManageData extends AppCompatActivity {
-    EditText et1,et2,et3,et4,et5,et6,et7;
+    EditText person_name, person_age, person_caretaker;
+    TextView person_name_label, person_age_label, person_sex_label, person_caretaker_label;
+    Spinner genderSpinner;
+
     String age,bed,health,literate,name,pension,religion,userid,uniqueId;
-    Button add_male,add_female;
+    Button next;
     ImageView add_image;
     FirebaseFirestore firestore;
     FirebaseAuth fAuth;
@@ -39,95 +48,43 @@ public class ManageData extends AppCompatActivity {
     private Uri mImageUri;
     StorageReference storageReference;
 
+    CharSequence[] genderList = {"Male", "Female"};
+    ArrayAdapter<CharSequence> gender_adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_data);
 
-        DatabaseReference ref= FirebaseDatabase.getInstance().getReference();
-        uniqueId = ref.push().getKey();
-        et1=(EditText) findViewById(R.id.age_et);
-        et2=(EditText) findViewById(R.id.bed_et);
-        et3=(EditText) findViewById(R.id.health_con_et);
-        et4=(EditText) findViewById(R.id.literacy_et);
-        et5=(EditText) findViewById(R.id.name_et);
-        et6=(EditText) findViewById(R.id.pension_et);
-        et7=(EditText) findViewById(R.id.religion_et);
-
-        add_male=(Button)findViewById(R.id.add_male);
-        add_female=(Button)findViewById(R.id.add_female);
-
-        fAuth=FirebaseAuth.getInstance();
-        firestore=FirebaseFirestore.getInstance();
-        storageReference= FirebaseStorage.getInstance().getReference();
-        add_image=(ImageView)findViewById(R.id.add_image_folder);
-
-        add_image.setOnClickListener(new View.OnClickListener() {
+        next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                openFileChooser();
+                launchFragment();
             }
         });
 
-
-
-        add_male.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View view) {
-
-                                            age = et1.getText().toString();
-                                            bed = et2.getText().toString();
-                                            health = et3.getText().toString();
-                                            literate = et4.getText().toString();
-                                            name = et5.getText().toString();
-                                            pension = et6.getText().toString();
-                                            religion = et7.getText().toString();
-                                           // userid = fAuth.getCurrentUser().getUid();
-                                            DocumentReference documentReference = firestore.collection("Male Users").document(uniqueId);
-                                            Map<String, Object> user = new HashMap<>();
-                                            user.put("Age", age);
-                                            user.put("Bed Written", bed);
-                                            user.put("Health Condition", health);
-                                            user.put("Literacy", literate);
-                                            user.put("Name", name);
-                                            user.put("Pension", pension);
-                                            user.put("Religion", religion);
-                                            user.put("Image",img_url);
-                                            //user.put("userType",spin_val);
-                                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void aVoid) {
-                                                    Toast.makeText(ManageData.this, "Successful", Toast.LENGTH_SHORT).show();
-                                                    Intent intent = getIntent();
-                                                    finish();
-                                                    startActivity(intent);
-
-                                                }
-                                            }).addOnFailureListener(new OnFailureListener() {
-                                                @Override
-                                                public void onFailure(@NonNull Exception e) {
-                                                    Toast.makeText(ManageData.this, "Failed", Toast.LENGTH_SHORT).show();
-                                                }
-                                            });
-                                            startstorageprocessimage();
-                                        }
-                                    });
-
-        add_female.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                age=et1.getText().toString();
-                bed=et2.getText().toString();
-                health=et3.getText().toString();
-                literate=et4.getText().toString();
-                name=et5.getText().toString();
-                pension=et6.getText().toString();
-                religion=et7.getText().toString();
-            }
-        });
+//        person_name_label = (TextView) findViewById(R.id.person_name_label);
+//        person_name = (EditText) findViewById(R.id.person_name);
+//        person_name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View view, boolean b) {
+//                if (b){
+//                    person_name_label.setTextColor(getResources().getColor(R.color.navy_blue));
+//                }
+//                else{
+//                    person_name_label.setTextColor(getResources().getColor(R.color.charcoal));
+//                }
+//            }
+//        });
+//
+//        genderSpinner = (Spinner) findViewById(R.id.gender_spinner);
     }
+
+    private void launchFragment(){
+
+    }
+
 
     private void openFileChooser() {
 

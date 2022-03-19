@@ -31,7 +31,6 @@
     <string name="unhealthy_diseased">Unhealthy/Diseased</string>
     <string name="health_condition">Health Condition</string>
     <string name="pensionwise">Pensionwise</string>
-    <string name="pension">Pension</string>
     <string name="dependant">Dependant</string>
     <string name="religion">Religion</string>
     <string name="hindu">Hindu</string>
@@ -44,4 +43,12 @@
     <string name="irreligion">Irreligion</string>
     <string name="others">Others</string>
     <string name="error">Error</string>
+    <string name="next_1_3">Next (1/3)</string>
+    <string name="add_a_person"><u>Add a person</u></string>
+    <string name="next_2_3">Next (2/3)</string>
+    <string name="bed_allocated">Bed allocated</string>
+    <string name="pension">Pension</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="finish">Finish</string>
+    <string name="phone_number_alternate">Phone number (Alternate)</string>
 </resources>
