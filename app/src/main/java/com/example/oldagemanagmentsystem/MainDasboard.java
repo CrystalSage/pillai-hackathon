@@ -18,7 +18,7 @@ public class MainDasboard extends AppCompatActivity {
     CardView cd1,cd2;
     Button log_out;
     PopupWindow popupWindow;
-    Button showPopupBtn, closePopupBtn;
+    Button BtnLogoutConfirm, closePopupBtn;
  //   LinearLayout linearLayout1;
 
     @Override
@@ -51,13 +51,25 @@ public class MainDasboard extends AppCompatActivity {
                 LayoutInflater layoutInflater = (LayoutInflater) MainDasboard.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 View customView = layoutInflater.inflate(R.layout.logout_confirm,null);
 
-                closePopupBtn = (Button) customView.findViewById(R.id.cancel);
+                closePopupBtn = (Button) customView.findViewById(R.id.btnLogoutCancel);
+                BtnLogoutConfirm = (Button) customView.findViewById(R.id.btnLogoutConfirm);
 
                 //instantiate popup window
                 popupWindow = new PopupWindow(customView, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
 
                 //display the popup window
                 popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+                BtnLogoutConfirm.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(MainDasboard.this,
+                                LoginDashboard.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+                                | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(intent);
+                    }
+                });
 
                 //close the popup window on button click
                 closePopupBtn.setOnClickListener(new View.OnClickListener() {

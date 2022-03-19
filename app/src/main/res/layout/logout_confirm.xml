@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@android:color/transparent"
     android:gravity="center"
     android:id="@+id/op_rel"
     android:padding="16dp">
@@ -40,11 +40,12 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btnLogoutConfirm"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_gravity="right"
                 android:layout_marginTop="70dp"
-                android:layout_marginRight="60dp"
+                android:layout_marginRight="30dp"
                 android:fontFamily="@font/lato"
                 android:text="Logout"
                 android:textColor="#1d1f21"
@@ -56,8 +57,8 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_gravity="left"
-                android:layout_marginStart="60dp"
-                android:id="@+id/cancel"
+                android:layout_marginStart="30dp"
+                android:id="@+id/btnLogoutCancel"
                 android:layout_marginTop="70dp"
                 android:backgroundTint="@color/charcoal"
                 android:fontFamily="@font/lato"

@@ -13,6 +13,12 @@
             android:name=".WorkshopSection"
             android:exported="false" />
         <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Logout"
+            android:exported="false" />
+        <activity
             android:name=".ManageData"
             android:exported="false" />
         <activity

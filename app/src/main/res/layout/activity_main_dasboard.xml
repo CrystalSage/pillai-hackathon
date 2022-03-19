@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".MainActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF">
+        android:background="@color/grey">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            app:title="Admin Dashboard"
-            app:titleMarginStart="120dp"
-            app:titleTextColor="@color/grey"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@color/navy_blue"
@@ -21,18 +21,40 @@
             android:theme="?attr/actionBarTheme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Admin Dashboard"
+            app:titleMarginStart="120dp"
+            app:titleTextColor="@color/grey">
 
-        <ImageView
+            <Button
+                android:id="@+id/log_out_admin"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@drawable/ic_logout"
+                android:layout_gravity="right"
+                android:drawablePadding="10dp"
+                android:background="@android:color/transparent"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
             android:id="@+id/imageView"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginRight="100dp"
-
+            android:layout_width="94dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/adminfinal"
+            app:civ_border_color="@color/charcoal"
+            app:civ_border_width="2dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
-            app:srcCompat="@drawable/adminfinal" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
@@ -47,13 +69,16 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/user_record"
                 android:layout_width="0dp"
-                android:backgroundTint="@color/browser_actions_bg_grey"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
                 <RelativeLayout
-                    android:layout_width="match_parent"
                     android:id="@+id/records_tab"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <TextView
@@ -64,6 +89,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Records"
+                        android:fontFamily="@font/lato"
                         android:textSize="18sp" />
 
                     <ImageView
@@ -75,13 +101,17 @@
                         app:srcCompat="@drawable/records" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/ManageEventShow"
                 android:layout_width="0dp"
-                android:backgroundTint="@color/browser_actions_bg_grey"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -94,6 +124,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Manage Data"
+                        android:fontFamily="@font/lato"
                         android:textSize="18sp" />
 
                     <ImageView
@@ -106,6 +137,7 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="0dp"
@@ -116,13 +148,17 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/Suggestions"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/browser_actions_bg_grey"
                 android:layout_margin="10dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -135,6 +171,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Food"
+                        android:fontFamily="@font/lato"
                         android:textSize="18sp" />
 
                     <ImageView
@@ -146,13 +183,17 @@
                         app:srcCompat="@drawable/foodicon" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/notices"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/browser_actions_bg_grey"
                 android:layout_margin="10dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -165,6 +206,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Medicines"
+                        android:fontFamily="@font/lato"
                         android:textSize="18sp" />
 
                     <ImageView
@@ -177,23 +219,28 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/last_sect"
             android:layout_width="0dp"
             android:layout_height="175dp"
             android:orientation="horizontal"
             android:padding="10dp"
-            android:id="@+id/last_sect"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/bookings"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/browser_actions_bg_grey"
                 android:layout_margin="10dp"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -206,6 +253,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Queries/FaQ"
+                        android:fontFamily="@font/lato"
                         android:textSize="18sp" />
 
                     <ImageView
@@ -217,13 +265,17 @@
                         app:srcCompat="@drawable/queries" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/logoutadmin"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:backgroundTint="@color/browser_actions_bg_grey"
-                android:layout_weight="1">
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -236,6 +288,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Emergency Services"
+                        android:fontFamily="@font/lato"
                         android:textSize="18sp" />
 
                     <ImageView
@@ -250,20 +303,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
             android:id="@+id/this_is_final"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/last_sect"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/log_out_admin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Logout">
-            </Button>
-
-        </LinearLayout>
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/last_sect"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -3,12 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/transparent_overlay.xml" value="0.297" />
+        <entry key="app/src/main/res/layout/activity_login_dashboard.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_login_dashboard_constraint.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/activity_login_dashboard_constrainy.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/activity_main_dasboard.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_manage_data.xml" value="0.371875" />
         <entry key="app/src/main/res/layout/activity_manage_data_2.xml" value="0.371875" />
         <entry key="app/src/main/res/layout/activity_manage_data_3.xml" value="0.371875" />
         <entry key="app/src/main/res/layout/activity_workshop_section.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/layout/forgot_password.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_female.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_first_manage_data.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/fragment_male_.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/fragment_manage_data_2.xml" value="0.12222222222222222" />
+        <entry key="app/src/main/res/layout/fragment_manage_data_form2.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/fragment_second_manage_data.xml" value="0.3567708333333333" />
+        <entry key="app/src/main/res/layout/fragment_third_manage_data.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/logout_confirm.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/person.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/menu/records_menu.xml" value="0.3723958333333333" />
       </map>
     </option>
   </component>

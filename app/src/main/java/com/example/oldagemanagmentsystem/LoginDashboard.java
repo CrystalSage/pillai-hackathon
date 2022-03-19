@@ -17,7 +17,7 @@ public class LoginDashboard extends AppCompatActivity {
 
     EditText email, password;
     Button login;
-    TextView register;
+    TextView forgot_password;
     boolean isEmailValid, isPasswordValid;
     TextInputLayout emailError, passError;
 
@@ -25,9 +25,31 @@ public class LoginDashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_dashboard);
+
+        forgot_password = findViewById(R.id.forgot_password);
+        login  = findViewById(R.id.login);
+
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ForgotPassword();
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SetValidation();
+            }
+        });
     }
 
-    public void SetValidation() {
+    private void ForgotPassword(){
+        startActivity(new Intent(getApplicationContext(), ForgotPassword.class));
+
+    }
+
+    private void SetValidation() {
         // Check for a valid email address.
         if (email.getText().toString().isEmpty()) {
             emailError.setError(getResources().getString(R.string.email_error));

@@ -48,41 +48,11 @@ public class ManageData extends AppCompatActivity {
     private Uri mImageUri;
     StorageReference storageReference;
 
-    CharSequence[] genderList = {"Male", "Female"};
-    ArrayAdapter<CharSequence> gender_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_data);
-
-        next = findViewById(R.id.next);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                launchFragment();
-            }
-        });
-
-//        person_name_label = (TextView) findViewById(R.id.person_name_label);
-//        person_name = (EditText) findViewById(R.id.person_name);
-//        person_name.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View view, boolean b) {
-//                if (b){
-//                    person_name_label.setTextColor(getResources().getColor(R.color.navy_blue));
-//                }
-//                else{
-//                    person_name_label.setTextColor(getResources().getColor(R.color.charcoal));
-//                }
-//            }
-//        });
-//
-//        genderSpinner = (Spinner) findViewById(R.id.gender_spinner);
-    }
-
-    private void launchFragment(){
-
     }
 
 
@@ -146,6 +116,10 @@ public class ManageData extends AppCompatActivity {
                 }
             });
             builder.build().load(mImageUri).into(add_image);
+        }
+
+        if (requestCode == RESULT_OK){
+
         }
     }
 }
