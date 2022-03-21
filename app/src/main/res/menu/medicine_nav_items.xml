@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Schedule"
+        android:icon="@drawable/ic_schedule"
+        android:id="@+id/medicine_nav_schedule_item"/>
+
+    <item
+        android:title="Stockpile"
+        android:icon="@drawable/ic_stockpile"
+        android:id="@+id/medicine_nav_stockpile_item"/>
+</menu>

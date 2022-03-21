@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_main_dashboard.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/activity_manage_data_3.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/fragment_medicine_counter.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/fragment_medicine_stockpile.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/fragment_profile_medicine.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_profile_overview.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/fragment_second_manage_data.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/fragment_third_manage_data.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/medicine.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/medicine_counter.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/medicine_nav_items.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/medicines.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/person.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/person_profile.xml" value="0.5" />
+        <entry key="app/src/main/res/menu/medicine_nav_items.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/menu/medicine_nav_itmes.xml" value="0.3723958333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
