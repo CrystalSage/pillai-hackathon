@@ -3,22 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_intro.xml" value="0.1921875" />
+        <entry key="app/src/main/res/layout/activity_login_dashboard.xml" value="0.1921875" />
         <entry key="app/src/main/res/layout/activity_main_dashboard.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/activity_manage_data.xml" value="0.1921875" />
+        <entry key="app/src/main/res/layout/activity_manage_data_2.xml" value="0.1921875" />
         <entry key="app/src/main/res/layout/activity_manage_data_3.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/emergency_section.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_male_.xml" value="0.1921875" />
         <entry key="app/src/main/res/layout/fragment_medicine_counter.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_medicine_stockpile.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/fragment_profile_diet.xml" value="0.1921875" />
         <entry key="app/src/main/res/layout/fragment_profile_medicine.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_profile_overview.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/fragment_second_manage_data.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/fragment_third_manage_data.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/layout/logout_confirm.xml" value="0.1921875" />
         <entry key="app/src/main/res/layout/medicine.xml" value="0.67" />
         <entry key="app/src/main/res/layout/medicine_counter.xml" value="0.5" />
         <entry key="app/src/main/res/layout/medicine_nav_items.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/medicines.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/person.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/layout/person_profile.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/screen.xml" value="0.1921875" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1921875" />
         <entry key="app/src/main/res/menu/medicine_nav_items.xml" value="0.3723958333333333" />
         <entry key="app/src/main/res/menu/medicine_nav_itmes.xml" value="0.3723958333333333" />
+        <entry key="app/src/main/res/menu/records_menu.xml" value="0.1921875" />
       </map>
     </option>
   </component>
