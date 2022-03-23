@@ -40,8 +40,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.firebase:firebase-database:20.0.3'
     implementation 'com.android.support:support-v4:28.0.0'
+<<<<<<< HEAD
     implementation 'androidx.navigation:navigation-fragment:2.4.1'
     implementation 'androidx.navigation:navigation-ui:2.4.1'
+=======
+>>>>>>> 8ddb70d1074fecaa28ba5be45fb5c690a56776f6
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     implementation 'de.hdodenhof:circleimageview:3.1.0'

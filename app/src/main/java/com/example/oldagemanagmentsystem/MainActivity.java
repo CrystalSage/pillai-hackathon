@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 } finally {
                     Intent intent = new Intent(MainActivity.this, ViewProfile.class);
+                    Intent intent = new Intent(MainActivity.this, LoginDashboard.class);
                     startActivity(intent);
                     finish();
                 }

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ForgotPassword extends AppCompatActivity {
     Button submitOTP;
     OtpEditText OTP;
+    EditText OTP;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,6 +20,8 @@ public class ForgotPassword extends AppCompatActivity {
         setContentView(R.layout.forgot_password);
 
         OTP = findViewById(R.id.et_otp);
+        OTP = findViewById(R.id.otpfield);
+
 
         submitOTP = findViewById(R.id.submitotp);
         submitOTP.setOnClickListener(new View.OnClickListener() {
